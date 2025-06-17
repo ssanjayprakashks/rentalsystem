@@ -19,10 +19,10 @@ FROM openjdk:17
 WORKDIR /app
  
 # Copy the built jar file from the build stage
-COPY --from=builder /app/target/*.jar demo.jar
+COPY --from=builder /app/target/*.jar rental-system.war
  
 # Expose the application port
 EXPOSE 9093:8080
  
 # Define the entrypoint to run the application
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "rental-system.war"]
