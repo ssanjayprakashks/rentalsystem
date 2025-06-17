@@ -22,7 +22,7 @@ services:
  
   rental-system:
     build: .
-    container_name: city-mangement
+    container_name: rental-system
     environment:
       MYSQL_HOST: mysql
       MYSQL_PORT: 3306
